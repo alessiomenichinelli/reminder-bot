@@ -53,3 +53,5 @@ def main():
     list = reminder_methods.check()
     if(list[0] == True):
         bot.send_message(list[1], "Promemoria:\n"+list[2])
+
+main()
