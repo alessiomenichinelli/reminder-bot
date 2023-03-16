@@ -1,5 +1,4 @@
 import telebot
-import time
 import reminder_methods
 
 TOKEN = "6222171448:AAE4XBIYa26UzoRD1zWZeoH6TE2i_2rpVgA"
@@ -47,11 +46,4 @@ def remove_reminder(message):
 def unknown(message):
     bot.reply_to(message, "Sorry, I didn't understand that command.")
 
-def main():
-    bot.infinity_polling()
-    time.sleep(1)
-    list = reminder_methods.check()
-    if(list[0] == True):
-        bot.send_message(list[1], "Promemoria:\n"+list[2])
-
-main()
+bot.infinity_polling()

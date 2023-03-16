@@ -34,11 +34,11 @@ def remove(reminder):
     
 def check():
     obj = datetime.now()
-    date = obj.strftime("%H:%M:%S")
+    date = obj.strftime("%H:%M")
     time = obj.strftime("%d-%m-%Y")
     reminders = get_reminders()
 
     for el in reminders:
-        if(el[1] == date & el[2]==time):
+        if(el[1] == date and el[2]==time):
             return [True, el[0], el[3]]
     return[False]
